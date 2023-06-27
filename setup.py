@@ -11,12 +11,13 @@ def read(fname):
 
 setup(
     name="pytest-group-by-class",
-    description=(''),
-    url='',
-    author='',
-    author_email='',
+    description=('A Pytest plugin for running a subset of your tests by '
+                 'splitting them in to groups of classes.'),
+    url='https://github.com/marco-mn/pytest-group-by-class',
+    author='marco-mn',
+    author_email='unknown',
     packages=['pytest_group_by_class'],
-    version='0.1.0',
+    version='0.1.1',
     long_description=read('README.md'),
     install_requires=['pytest>=2.5'],
     classifiers=['Development Status :: 5 - Production/Stable',
