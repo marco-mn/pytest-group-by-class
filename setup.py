@@ -17,7 +17,7 @@ setup(
     author='marco-mn',
     author_email='snoopy@peanuts.com',
     packages=['pytest_group_by_class'],
-    version='0.1.4',
+    version='0.1.5',
     long_description=read('README.md'),
     long_description_content_type="text/markdown",
     install_requires=['pytest>=2.5'],
