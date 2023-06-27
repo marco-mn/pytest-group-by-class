@@ -17,7 +17,7 @@ setup(
     author='marco-mn',
     author_email='unknown',
     packages=['pytest_group_by_class'],
-    version='0.1.1',
+    version='0.1.2',
     long_description=read('README.rst'),
     install_requires=['pytest>=2.5'],
     classifiers=['Development Status :: 5 - Production/Stable',
