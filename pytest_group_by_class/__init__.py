@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import argparse
+
+import pytest
 from _pytest.config import create_terminal_writer
 
 
@@ -9,12 +11,12 @@ def get_group(class_test_map, group_id, group_name):
         for cls in class_test_map:
             if class_test_map[cls]["index"] == int(group_id):
                 return class_test_map[cls]["items"]
-        raise ValueError("Invalid test-group-class-id argument")
+        raise ValueError(f"Invalid test-group-class-id argument, max index is {len(class_test_map)}")
     if group_name is not None:
         for cls in class_test_map:
             if cls == group_name:
                 return class_test_map[cls]["items"]
-        raise ValueError("Invalid test-group-class-name argument")
+        raise ValueError(f"Invalid test-group-class-name argument")
 
 
 def pytest_addoption(parser):
@@ -29,7 +31,7 @@ def pytest_addoption(parser):
 
 def collect_classes(items):
     data = {}
-    counter = 0
+    counter = 1
     for i in items:
         test_class = i.parent.name
         if test_class not in data:
@@ -46,6 +48,7 @@ def collect_classes(items):
     return data
 
 
+@pytest.hookimpl(trylast=True)
 def pytest_collection_modifyitems(config, items):
     group_class = config.getoption('test-group-class')
     group_id = config.getoption('test-group-class-id')
