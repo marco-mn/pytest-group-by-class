@@ -1,13 +1,12 @@
 Welcome to pytest-group-by-class!
 =============================
 
-_pytest-group-by-class allows you to split your test runs into groups of tests that belongs to the same class
-to make it easier to split up your test runs._
+pytest-group-by-class allows you to split your test runs into groups of tests that belongs to the same class
+to make it easier to split up your test runs.
 
 
 Usage
---
-
+----------------------
     # Install pytest-group-by-class
     pip install pytest-group-by-class
 
@@ -20,7 +19,7 @@ Usage
 
 
 Why would I use this?
---
+----------------------
 
 Sometimes you may have some long running test jobs that take a
 while to complete. This can be a major headache when trying to
