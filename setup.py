@@ -16,7 +16,7 @@ setup(
     author='',
     author_email='',
     packages=['pytest_group_by_class'],
-    version='0.0.1',
+    version='0.1.0',
     long_description=read('README.md'),
     install_requires=['pytest>=2.5'],
     classifiers=['Development Status :: 5 - Production/Stable',
